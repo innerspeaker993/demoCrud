@@ -9,7 +9,7 @@
                         <label for="username" class="col-sm-3 control-label">Username</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="username" name="username" 
-                            value="<%=info[0].username%>">
+                            value="<%=info[0].username%>" required>
                         </div>
                     </div> 
  
@@ -17,7 +17,7 @@
                         <label for="email" class="col-sm-3 control-label">Email</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="email" name="email"
-                            value="<%=info[0].email%>">
+                            value="<%=info[0].email%>" required>
                         </div>
                     </div>
  
@@ -25,7 +25,7 @@
                         <label for="password" class="col-sm-3 control-label">Password</label>
                         <div class="col-sm-9">
                             <input type="password" class="form-control" id="password" name="password"
-                            value="<%=info[0].password%>">
+                            value="<%=info[0].password%>" required>
                         </div>
                     </div>
                     <!--campo oculto para decirle a express que es una petición put-->
