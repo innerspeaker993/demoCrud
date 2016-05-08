@@ -13,9 +13,9 @@ var methodOverride = require('method-override');
 var app = express();
  
 //configuración para ejs
+//app.engine("html", require("ejs").renderFile);
 app.set('views', path.join(__dirname, 'views'));
-app.engine("html", require("ejs").renderFile);
-app.set('view engine', 'html');
+app.set('view engine', 'jade');
  
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
