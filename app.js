@@ -13,15 +13,15 @@ var methodOverride = require('method-override');
 var app = express();
  
 //configuración para ejs
-//app.engine("html", require("ejs").renderFile);
+app.engine("html", require("ejs").renderFile);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'html');
  
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));  
  
 //configuramos methodOverride
 app.use(methodOverride(function(req, res){
