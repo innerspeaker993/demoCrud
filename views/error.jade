@@ -1,28 +1,28 @@
 include partials/header.jade
-	form(method="POST" action="/user")
-		div(class="col-sm-6 col-md-offset-3")
-			h4 Añadir nuevo usuario:
-			div(class="panel panel-default")
-				div(class="panel-body form-horizontal payment-form")
+form(method="POST" action="/user")
+	div(class="col-sm-6 col-md-offset-3")
+		h4 Añadir nuevo usuario:
+		div(class="panel panel-default")
+			div(class="panel-body form-horizontal payment-form")
 
-					div(class="form-group")
-						label(for="username", class="col-sm-3 control-label") Username
-						div(class="col-sm-9")
-							input(type="text", class="form-control", id="username", placeholder="username", required)
+				div(class="form-group")
+					label(for="username", class="col-sm-3 control-label") Username
+					div(class="col-sm-9")
+						input(type="text", class="form-control", id="username", name="username",placeholder="username", required)
 
-					div(class="form-group")
-						label(for="email" class="col-sm-3 control-label") Email
-						div(class="col-sm-9")
-							input(type="text", class="form-control" id="email" name="email", placeholder="e-mail", required)
+				div(class="form-group")
+					label(for="email" class="col-sm-3 control-label") Email
+					div(class="col-sm-9")
+						input(type="text", class="form-control" id="email" name="email", placeholder="e-mail", required)
 
-					div(class="form-group")
-						label(for="password", class="col-sm-3 control-label") Password
-						div(class="col-sm-9")
-							input(type="password", class="form-control", id="password", name="password", placeholder="password", required)
+				div(class="form-group")
+					label(for="password", class="col-sm-3 control-label") Password
+					div(class="col-sm-9")
+						input(type="password", class="form-control", id="password", name="password", placeholder="password", required)
 
 
-					div(class="form-group")
-						div(class="col-sm-12 text-right")
-							button(type="submit" class="btn btn-primary preview-add-button")
-								span(class="glyphicon glyphicon-plus") Add
+				div(class="form-group")
+					div(class="col-sm-12 text-right")
+						button(type="submit" class="btn btn-primary preview-add-button")
+							span(class="glyphicon glyphicon-plus") Add
 include partials/footer.jade
