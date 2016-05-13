@@ -1,5 +1,5 @@
 include partials/header.jade
-	if (users.length) 
+	if users.length 
 		table(class="table")
 			tr#tabla1
 				td Username
@@ -11,15 +11,17 @@ include partials/header.jade
 			each user in users
 				table(class="table")
 					tr#tabla
-						td= user.username
-						td= user.email
+						td=user.username
+						td=user.email
 						td 
-							a(href="/user/user.id", class="btn btn-success")
-								span(class="glyphicon glyphicon-edit") Edit
+							 //- Error al pasar el id del usuario  
+							 a(href="/user/user.id", class="btn btn-success") 
+								span(class="glyphicon glyphicon-edit") Edit 
+
 						td
 							form(method ="POST", action="/user")
 								input(type="hidden", name="_method", value="DELETE")
-								input( type="hidden", name="id" value="=user.id")
+								input( type="hidden", name="id" value="user.id")
 								button(type="submit", class="btn btn-danger preview-add-button")
 									span(class="glyphicon glyphicon-plus") Delete 
 				
